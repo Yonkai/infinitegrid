@@ -2076,13 +2076,16 @@
 <script>
 //loop this with random letters a-z so that it updates the whole grid
 //with 'information'
+var binary = '01';
+var numbers = '0123456789';
+var hex = '0123456789ABCDEF';
 var chars = "_abcdefghiklmnopqrstuvwxyz".toUpperCase();
 function randomString() {
     var string_length = 1;
     var randomstring = '';
     for (var i=0; i<string_length; i++) {
-        var rnum = Math.floor(Math.random() * chars.length);
-        randomstring += chars.substring(rnum,rnum+1);
+        var rnum = Math.floor(Math.random() * numbers.length);
+        randomstring += numbers.substring(rnum,rnum+1);
     }
     return randomstring;
 }
