@@ -2,8 +2,9 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> -->
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -2086,15 +2087,23 @@ var decimal = '012346789';
 var duodecimal = '0123456789AB';
 var vigesimal = '0123456789ABCDEFGHIJ';
 var hex = '0123456789ABCDEF';
-var sexagesimal = `😀😁😂🤣😃😄😅😆😉😊😋😎😍😘😗😙😚🙂🤗🤩🤔🤨😐😑😶🙄😏😣😥😮🤐😯😪😫😴😌😛😜😝🤤😒😓😔😕🙃🤑😲☹️🙁😖😞😟😤😢😭😦😧😨😩`;
+//Need to read how this whole unicode thing reeealy works.
+var sexagesimal = '❤️🧡💛💚💙💜😅😆😉😊😋😎😍😘😗😙😚🙂🤗🤩🤔🤨😐😑😶🙄😏😣😥😮🤐😯😪😫😴😌😛😜😝🤤😒😓😔😕🙃🤑😲☹️🙁😖😞😟😤😢😭😦😧😨😩';
 var chars = "_abcdefghiklmnopqrstuvwxyz".toUpperCase();
 function randomString() {
     var string_length = 1;
     var randomstring = '';
     for (var i=0; i<string_length; i++) {
-        var rnum = Math.floor(Math.random() * sexagesimal.length);
-        randomstring += sexagesimal.substring(rnum,rnum+1);
+        var rnum = Math.floor(Math.random() * octal.length);
+        randomstring += octal.substring(rnum,rnum+1);
     }
+    // Emoji case:
+
+    // for (var i=0; i<string_length; i++) {
+    //     var rnum = Math.floor(Math.random() * sexagesimal.length);
+    //     rnum = 2 * Math.round(rnum / 2);
+    //     randomstring += sexagesimal.substring(rnum, (rnum<sexagesimal.length-2) ? rnum+2: rnum-2);
+    // }
     return randomstring;
 }
 function runInfiniteGrid(){
