@@ -2077,15 +2077,23 @@
 //loop this with random letters a-z so that it updates the whole grid
 //with 'information'
 var binary = '01';
-var numbers = '0123456789';
+var ternary = '012';
+var quaternary = '0123';
+var quinary = '01234';
+var senary = '012345';
+var octal = '01234567';
+var decimal = '012346789';
+var duodecimal = '0123456789AB';
+var vigesimal = '0123456789ABCDEFGHIJ';
 var hex = '0123456789ABCDEF';
+var sexagesimal = `😀😁😂🤣😃😄😅😆😉😊😋😎😍😘😗😙😚🙂🤗🤩🤔🤨😐😑😶🙄😏😣😥😮🤐😯😪😫😴😌😛😜😝🤤😒😓😔😕🙃🤑😲☹️🙁😖😞😟😤😢😭😦😧😨😩`;
 var chars = "_abcdefghiklmnopqrstuvwxyz".toUpperCase();
 function randomString() {
     var string_length = 1;
     var randomstring = '';
     for (var i=0; i<string_length; i++) {
-        var rnum = Math.floor(Math.random() * numbers.length);
-        randomstring += numbers.substring(rnum,rnum+1);
+        var rnum = Math.floor(Math.random() * sexagesimal.length);
+        randomstring += sexagesimal.substring(rnum,rnum+1);
     }
     return randomstring;
 }
