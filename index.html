@@ -2033,13 +2033,7 @@
     <div class="item"></div>
     <div class="item"></div>
     <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
+
 
   </div>
 
@@ -2049,9 +2043,9 @@
       display: grid;
       border:1px solid rgb(34, 201, 159);
       justify-items:stretch;
-      grid-template-columns: repeat(10, 1fr);
-      grid-template-rows: repeat(200,1fr);
-      grid-gap:1px;
+      grid-template-columns:repeat(50,1fr);
+      grid-template-rows: repeat(40,1fr);
+      grid-gap:4px;
       align-items:center;
     }     
     body{
@@ -2119,7 +2113,7 @@ function randomString() {
     //     rnum = 2 * Math.round(rnum / 2);
     //     randomstring += sexagesimal.substring(rnum, (rnum<sexagesimal.length-2) ? rnum+2: rnum-2);
     // }
-    // return randomstring;
+     return randomstring;
 }
 
 function runInfiniteGrid(){
