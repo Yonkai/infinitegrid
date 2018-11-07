@@ -2075,8 +2075,9 @@
   </style>
 
 <script>
-//loop this with random letters a-z so that it updates the whole grid
-//with 'information'
+
+var gridRefreshRate = 1000;
+//Bases/letter systems for grid:
 var binary = '01';
 var ternary = '012';
 var quaternary = '0123';
@@ -2087,32 +2088,51 @@ var decimal = '012346789';
 var duodecimal = '0123456789AB';
 var vigesimal = '0123456789ABCDEFGHIJ';
 var hex = '0123456789ABCDEF';
-//Need to read how this whole unicode thing reeealy works.
 var sexagesimal = '❤️🧡💛💚💙💜😅😆😉😊😋😎😍😘😗😙😚🙂🤗🤩🤔🤨😐😑😶🙄😏😣😥😮🤐😯😪😫😴😌😛😜😝🤤😒😓😔😕🙃🤑😲☹️🙁😖😞😟😤😢😭😦😧😨😩';
 var chars = "_abcdefghiklmnopqrstuvwxyz".toUpperCase();
+
+//For color based information
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 function randomString() {
     var string_length = 1;
     var randomstring = '';
+
+    //For everything besides base 60 case:
     for (var i=0; i<string_length; i++) {
-        var rnum = Math.floor(Math.random() * octal.length);
-        randomstring += octal.substring(rnum,rnum+1);
+      // Switch out the bases vars for different bases (length and substrings)
+        var rnum = Math.floor(Math.random() * vigesimal.length);
+        randomstring += vigesimal.substring(rnum,rnum+1);
     }
-    // Emoji case:
+
+    // Emoji (Base 60) case:
 
     // for (var i=0; i<string_length; i++) {
     //     var rnum = Math.floor(Math.random() * sexagesimal.length);
     //     rnum = 2 * Math.round(rnum / 2);
     //     randomstring += sexagesimal.substring(rnum, (rnum<sexagesimal.length-2) ? rnum+2: rnum-2);
     // }
-    return randomstring;
+    // return randomstring;
 }
 function runInfiniteGrid(){
     for(i=0;i<document.getElementsByClassName('item').length;i++){
       document.getElementsByClassName('item')[i].innerHTML = randomString();
-      document.getElementsByClassName('item')[i].style.color = "black";
+
+      //Switch background and/or color to getRandomColor to go into  "color" mode.
+      document.getElementsByClassName('item')[i].style.color = getRandomColor();
+      document.getElementsByClassName('item')[i].style.background = getRandomColor();
     }
 }
-setInterval(runInfiniteGrid,1000);
+
+//Run every second
+setInterval(runInfiniteGrid,gridRefreshRate);
   </script>
 
 
