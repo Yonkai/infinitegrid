@@ -2041,16 +2041,15 @@
     /* Make more responsive so the grid fits the screen. */
     .container {
       display: grid;
-      border:1px solid rgb(34, 201, 159);
+      /* border:1px solid rgb(34, 201, 159); */
       justify-items:stretch;
-      grid-template-columns:repeat(50,1fr);
-      grid-template-rows: repeat(40,1fr);
-      grid-gap:4px;
+      grid-template-columns:repeat(auto-fit, minmax(15px,1fr));
+      /* grid-gap:4px; */
       align-items:center;
     }     
     body{
-      background:rgb(78, 78, 78);
-      min-height: calc(100vh - 100px);
+      background:pink;
+      max-height: 100vh;
     }
 
   .item {
