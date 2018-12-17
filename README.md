@@ -1,4 +1,11 @@
 # infinitegrid
+Shows everything you could possibly want in the givenL space, theoretically. Works in multiple bases. This was a quick project for personal entertainment purposes.
 
-Shows everything you could possibly want in the given space, theoretically. Works in multiple bases. 
+# Live Link
 https://yonkai.github.io/infinitegrid
+
+## Author
+* Frank Gunsch
+
+## License
+This project is licensed under the MIT License
