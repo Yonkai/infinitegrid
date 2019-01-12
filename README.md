@@ -5,7 +5,8 @@ Shows everything you could possibly want in the givenL space, theoretically. Wor
 https://yonkai.github.io/infinitegrid
 
 ## Made With
-CSS Native Grid
+* CSS Grid
+* [HTML5boilerplate](https://html5boilerplate.com/)
 
 ## Author
 * Frank Gunsch
